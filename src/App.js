@@ -1,10 +1,12 @@
-import React from "react";
-import Dashboard from "./Dashboard";
+import { useRoutes } from 'react-router-dom';
+import routes from "./routes";
 
 function App() {
+    const routing = useRoutes(routes);
+
     return (
         <div>
-            <Dashboard />
+            {routing}
         </div>
     );
 }

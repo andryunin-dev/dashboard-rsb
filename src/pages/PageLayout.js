@@ -4,6 +4,8 @@ import Copyright from "../components/Copyright";
 import React from "react";
 import {useStyles} from "../style/style";
 import DefaultPage from "./DefaultPage";
+import { Outlet } from 'react-router-dom';
+
 
 function PageLayout() {
     const classes = useStyles();
@@ -13,6 +15,7 @@ function PageLayout() {
             <div className={classes.appBarSpacer} />
             <Container maxWidth="lg" className={classes.container}>
                 <DefaultPage />
+                <Outlet />
                 <Box pt={4}>
                     <Copyright />
                 </Box>
