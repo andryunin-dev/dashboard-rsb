@@ -42,7 +42,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     drawerPaper: {
         position: 'relative',
-        whiteSpace: 'nowrap',
+        whiteSpace: 'auto',
         width: drawerWidth,
         transition: theme.transitions.create('width', {
             easing: theme.transitions.easing.sharp,
@@ -78,5 +78,8 @@ export const useStyles = makeStyles((theme) => ({
     },
     fixedHeight: {
         height: 240,
+    },
+    nested: {
+        paddingLeft: theme.spacing(4),
     },
 }));

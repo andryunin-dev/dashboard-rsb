@@ -12,9 +12,10 @@ import Badge from '@material-ui/core/Badge';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import {mainListItems, secondaryListItems} from './components/listItems';
+import {secondaryListItems} from './components/listItems';
 import {useStyles} from "./style/style";
 import PageLayout from "./pages/PageLayout";
+import MenuListItems from "./components/MenuListItems";
 
 
 function DashboardLayout() {
@@ -66,7 +67,7 @@ function DashboardLayout() {
             </IconButton>
           </div>
           <Divider />
-          <List>{mainListItems}</List>
+          <MenuListItems />
           <Divider />
           <List>{secondaryListItems}</List>
         </Drawer>
