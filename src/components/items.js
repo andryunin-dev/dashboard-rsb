@@ -4,11 +4,9 @@ import React from "react";
 export const myData = [
     {
         id: '1',
-        nameHeader: 'Header1',
+        nameHeader: 'Офисы',
         iconHeader: (<Settings />),
-        subMenu: [
-            { id: '1', name: 'subMenu1', href: '/Header1/subMenu1' },
-            { id: '2', name: 'subMenu2', href: '/Header1/subMenu2' }]
+        href: '/locations'
     },
     {
         id: '2',
@@ -16,7 +14,7 @@ export const myData = [
         iconHeader: (<Settings />),
         subMenu: [
             { id: '1', name: 'subMenu1', href: '/Header2/subMenu1' },
-            { id: '2', name: 'subMenu2', href: '/Header2/subMenu2' }]
+            { id: '2', name: 'subMenu2', href: '/Header2/subMenu2' }],
     },
     {
         id: '3',
@@ -25,6 +23,6 @@ export const myData = [
         subMenu: [
             { id: '1', name: 'subMenu1', href: '/Header3/subMenu1' },
             { id: '2', name: 'subMenu2', href: '/Header3/subMenu2' },
-            { id: '3', name: 'subMenu3', href: '/Header3/subMenu3' }]
+            { id: '3', name: 'subMenu3', href: '/Header3/subMenu3' }],
     }
 ]

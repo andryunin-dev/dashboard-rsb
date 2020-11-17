@@ -6,7 +6,7 @@ import {ExpandLess, ExpandMore} from "@material-ui/icons";
 import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
 import {myData} from "./items";
-import { NavLink as RouterLink } from 'react-router-dom';
+import {NavLink as RouterLink} from 'react-router-dom';
 
 
 class MenuListItems extends Component {
@@ -31,15 +31,22 @@ class MenuListItems extends Component {
             <List>
                 {myData.map(each => (
                     <React.Fragment key={each.id}>
-                        <ListItem button onClick={() => this.handleClick(each.id)}>
+                        <ListItem button
+                                  onClick={() => this.handleClick(each.id)}
+                                  component={each.href !== undefined ? RouterLink : null}
+                                  to={each.href !== undefined ? each.href : null}
+                        >
                             <ListItemIcon>
                                 {each.iconHeader}
                             </ListItemIcon>
                             <ListItemText primary={each.nameHeader} />
-                            {settings.find(item => item.id === each.id).open
-                                ? <ExpandLess />
-                                : <ExpandMore />}
-                            {/*{openCollapse ? <ExpandLess /> : <ExpandMore />}*/}
+                            {
+                                each.subMenu !== undefined
+                                    ? settings.find(item => item.id === each.id).open
+                                        ? <ExpandLess />
+                                        : <ExpandMore />
+                                    : <div />
+                            }
                         </ListItem>
                         <Collapse
                             in={settings.find(item => item.id === each.id).open}
@@ -47,11 +54,15 @@ class MenuListItems extends Component {
                             unmountOnExit
                         >
                             <List component="div" disablePadding>
-                                {each.subMenu.map(subData => (
-                                    <ListItem key={subData.id} button component={RouterLink} to={subData.href}>
-                                        <ListItemText primary={subData.name} />
-                                    </ListItem>
-                                ))}
+                                {
+                                    each.subMenu !== undefined
+                                    ? each.subMenu.map(subData => (
+                                            <ListItem key={subData.id} button component={RouterLink} to={subData.href}>
+                                                <ListItemText primary={subData.name} />
+                                            </ListItem>
+                                        ))
+                                    : null
+                                }
                             </List>
                         </Collapse>
                     </React.Fragment>
