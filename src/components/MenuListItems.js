@@ -6,6 +6,7 @@ import {ExpandLess, ExpandMore} from "@material-ui/icons";
 import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
 import {myData} from "./items";
+import { NavLink as RouterLink } from 'react-router-dom';
 
 
 class MenuListItems extends Component {
@@ -47,7 +48,7 @@ class MenuListItems extends Component {
                         >
                             <List component="div" disablePadding>
                                 {each.subMenu.map(subData => (
-                                    <ListItem key={subData.id} button>
+                                    <ListItem key={subData.id} button component={RouterLink} to={subData.href}>
                                         <ListItemText primary={subData.name} />
                                     </ListItem>
                                 ))}
