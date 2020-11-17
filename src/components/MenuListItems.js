@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {List} from "@material-ui/core";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
-import {ExpandLess, ExpandMore} from "@material-ui/icons";
+import {ChevronRight, ExpandLess, ExpandMore} from "@material-ui/icons";
 import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
 import {myData} from "./items";
@@ -58,6 +58,9 @@ class MenuListItems extends Component {
                                     each.subMenu !== undefined
                                     ? each.subMenu.map(subData => (
                                             <ListItem key={subData.id} button component={RouterLink} to={subData.href}>
+                                                <ListItemIcon>
+                                                    <ChevronRight />
+                                                </ListItemIcon>
                                                 <ListItemText primary={subData.name} />
                                             </ListItem>
                                         ))
