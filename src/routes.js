@@ -2,6 +2,7 @@ import Dashboard from "./Dashboard";
 import React from "react";
 import { Navigate } from 'react-router-dom';
 import Locations from "./pages/Locations";
+import Example from "./pages/Example";
 
 const routes = [
     {
@@ -10,7 +11,7 @@ const routes = [
         children: [
             { path: '/locations', element: <Locations /> },
             { path: '/equipment', element: <h1>Оборудование</h1> },
-            { path: '/report/new', element: <h1>Reports</h1> },
+            { path: '/report/new', element: <Example />},
             { path: '/', element: <Navigate to="/locations" /> }
         ]
     },
