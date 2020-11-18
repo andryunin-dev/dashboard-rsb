@@ -10,19 +10,53 @@ export const myData = [
     },
     {
         id: '2',
-        nameHeader: 'Header2',
+        nameHeader: 'Оборудование',
         iconHeader: (<Settings />),
-        subMenu: [
-            { id: '1', name: 'subMenu1', href: '/Header2/subMenu1' },
-            { id: '2', name: 'subMenu2', href: '/Header2/subMenu2' }],
+        href: '/equipment'
     },
     {
         id: '3',
-        nameHeader: 'Header3',
+        nameHeader: 'Phones',
         iconHeader: (<Settings />),
         subMenu: [
-            { id: '1', name: 'subMenu1', href: '/Header3/subMenu1' },
-            { id: '2', name: 'subMenu2', href: '/Header3/subMenu2' },
-            { id: '3', name: 'subMenu3', href: '/Header3/subMenu3' }],
-    }
+            { id: '1', name: 'Телефоны Инфо', href: '/phones/info' },
+            { id: '2', name: 'Телефоны по ФИО', href: '/phones/fio' },
+            { id: '3', name: 'Телефоны с переадресацией', href: '/phones/forwarding' }
+        ],
+    },
+    {
+        id: '4',
+        nameHeader: 'IP Planning',
+        iconHeader: (<Settings />),
+        subMenu: [
+            { id: '1', name: 'IPAM', href: '/ip-planning/ipam' }
+        ],
+    },
+    {
+        id: '5',
+        nameHeader: 'Reports',
+        iconHeader: (<Settings />),
+        href: '/report/new'
+    },
+    {
+        id: '6',
+        nameHeader: 'Phones reports',
+        iconHeader: (<Settings />),
+        subMenu: [
+            { id: '1', name: 'По моделям', href: '/phones-reports/model' },
+            { id: '2', name: 'По кластерам', href: '/phones-reports/cluster' },
+            { id: '3', name: 'По не используемым', href: '/phones-reports/unused' },
+            { id: '4', name: 'По Agent Licenses', href: '/phones-reports/agent-licenses' }
+        ],
+    },
+    {
+        id: '7',
+        nameHeader: 'Tools',
+        iconHeader: (<Settings />),
+        subMenu: [
+            { id: '1', name: 'Поиск незарегистрированных телефонов', href: '/tools/search-unregistered-phones' },
+            { id: '2', name: 'CUCM маршрутизация', href: '/tools/cucm-routing' },
+            { id: '3', name: 'Testing CORS requests', href: '/tools/testing-cors-requests' },
+        ],
+    },
 ]
