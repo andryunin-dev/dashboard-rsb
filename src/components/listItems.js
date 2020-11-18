@@ -1,70 +1,63 @@
-import React from 'react';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import PeopleIcon from '@material-ui/icons/People';
+import {Business, DevicesOther, Dns, LocalPhone, Settings, SettingsPhone} from "@material-ui/icons";
 import BarChartIcon from '@material-ui/icons/BarChart';
-import LayersIcon from '@material-ui/icons/Layers';
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import React from "react";
 
-export const mainListItems = (
-  <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItem>
-  </div>
-);
-
-export const secondaryListItems = (
-  <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Current month" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Last quarter" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
-    </ListItem>
-  </div>
-);
+export const myData = [
+    {
+        id: '1',
+        nameHeader: 'Офисы',
+        iconHeader: (<Business />),
+        href: '/locations'
+    },
+    {
+        id: '2',
+        nameHeader: 'Оборудование',
+        iconHeader: (<DevicesOther />),
+        href: '/equipment'
+    },
+    {
+        id: '3',
+        nameHeader: 'Phones',
+        iconHeader: (<LocalPhone />),
+        subMenu: [
+            { id: '1', name: 'Телефоны Инфо', href: '/phones/info' },
+            { id: '2', name: 'Телефоны по ФИО', href: '/phones/fio' },
+            { id: '3', name: 'Телефоны с переадресацией', href: '/phones/forwarding' }
+        ],
+    },
+    {
+        id: '4',
+        nameHeader: 'IP Planning',
+        iconHeader: (<Dns />),
+        subMenu: [
+            { id: '1', name: 'IPAM', href: '/ip-planning/ipam' }
+        ],
+    },
+    {
+        id: '5',
+        nameHeader: 'Reports',
+        iconHeader: (<BarChartIcon />),
+        href: '/report/new'
+    },
+    {
+        id: '6',
+        nameHeader: 'Phones reports',
+        iconHeader: (<SettingsPhone />),
+        subMenu: [
+            { id: '1', name: 'По моделям', href: '/phones-reports/model' },
+            { id: '2', name: 'По кластерам', href: '/phones-reports/cluster' },
+            { id: '3', name: 'По не используемым', href: '/phones-reports/unused' },
+            { id: '4', name: 'По Agent Licenses', href: '/phones-reports/agent-licenses' }
+        ],
+    },
+    {
+        id: '7',
+        nameHeader: 'Tools',
+        iconHeader: (<Settings />),
+        subMenu: [
+            { id: '1', name: 'Поиск незарегистрированных телефонов', href: '/tools/search-unregistered-phones' },
+            { id: '2', name: 'CUCM маршрутизация', href: '/tools/cucm-routing' },
+            { id: '3', name: 'Testing CORS requests', href: '/tools/testing-cors-requests' },
+        ],
+    },
+]

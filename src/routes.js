@@ -51,6 +51,23 @@ const routes = [
             { path: 'testing-cors-requests', element: <div>testing-cors-requests</div> },
         ]
     },
+    {
+        path: 'directory',
+        element: <Dashboard />,
+        children: [
+            { path: 'mapping', element: <div>mapping</div> },
+            { path: 'regions', element: <div>regions</div> },
+            { path: 'cities', element: <div>cities</div> },
+            { path: 'office-statuses', element: <div>office-statuses</div> },
+            { path: 'equipment', element: <div>equipment</div> },
+            { path: 'port-types', element: <div>port-types</div> },
+            { path: 'vrf', element: <div>vrf</div> },
+            { path: 'networks-table', element: <div>networks-table</div> },
+            { path: 'networks-tree', element: <div>networks-tree</div> },
+            { path: 'hardware-logs', element: <div>hardware-logs</div> },
+            { path: 'phones-logs', element: <div>phones-logs</div> },
+        ]
+    },
 
 ];
 
