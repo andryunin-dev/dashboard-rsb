@@ -1,6 +1,7 @@
 import Grid from "@material-ui/core/Grid";
 import React from "react";
 
+
 function NotFound() {
     return (
         <Grid container spacing={3}>

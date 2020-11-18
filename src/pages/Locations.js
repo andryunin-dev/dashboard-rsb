@@ -2,6 +2,7 @@ import Grid from "@material-ui/core/Grid";
 import React from "react";
 import LocationsTable from "../components/LocationsTable";
 
+
 function Locations() {
     return (
         <Grid container spacing={3}>
