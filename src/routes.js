@@ -1,71 +1,69 @@
 import Dashboard from "./Dashboard";
 import React from "react";
 import { Navigate } from 'react-router-dom';
+import Locations from "./pages/Locations";
 
 const routes = [
     {
         path: '/',
         element: <Dashboard />,
         children: [
-            { path: '/locations', element: <div>locations</div> },
-            { path: '/equipment', element: <div>equipment</div> },
-            { path: '/report/new', element: <div>Reports</div> },
-            { path: '1', element: <div>1</div> },
-            { path: '2', element: <div>2</div> },
-            { path: '3', element: <div>3</div> },
-            { path: '/', element: <Navigate to="/1" /> }
+            { path: '/locations', element: <Locations /> },
+            { path: '/equipment', element: <h1>Оборудование</h1> },
+            { path: '/report/new', element: <h1>Reports</h1> },
+            { path: '/', element: <Navigate to="/locations" /> }
         ]
     },
     {
         path: 'phones',
         element: <Dashboard />,
         children: [
-            { path: 'info', element: <div>info</div> },
-            { path: 'fio', element: <div>fio</div> },
-            { path: 'forwarding', element: <div>forwarding</div> },
+            { path: 'info', element: <h1>Телефоны Инфо</h1> },
+            { path: 'fio', element: <h1>Телефоны по ФИО</h1> },
+            { path: 'forwarding', element: <h1>Телефоны с переадресацией</h1> },
         ]
     },
     {
         path: 'ip-planning',
         element: <Dashboard />,
         children: [
-            { path: 'ipam', element: <div>ipam</div> },
+            { path: 'ipam', element: <h1>IPAM</h1> },
         ]
     },
     {
         path: 'phones-reports',
         element: <Dashboard />,
         children: [
-            { path: 'model', element: <div>model</div> },
-            { path: 'cluster', element: <div>cluster</div> },
-            { path: 'unused', element: <div>unused</div> },
-            { path: 'agent-licenses', element: <div>agent-licenses</div> },
+            { path: 'model', element: <h1>По моделям</h1> },
+            { path: 'cluster', element: <h1>По кластерам</h1> },
+            { path: 'unused', element: <h1>По не используемым</h1> },
+            { path: 'agent-licenses', element: <h1>По Agent Licenses</h1> },
         ]
     },
     {
         path: 'tools',
         element: <Dashboard />,
         children: [
-            { path: 'search-unregistered-phones', element: <div>search-unregistered-phones</div> },
-            { path: 'cucm-routing', element: <div>cucm-routing</div> },
-            { path: 'testing-cors-requests', element: <div>testing-cors-requests</div> },
+            { path: 'search-unregistered-phones', element: <h1>Поиск незарегистрированных телефонов</h1> },
+            { path: 'cucm-routing', element: <h1>CUCM маршрутизация</h1> },
+            { path: 'testing-cors-requests', element: <h1>Testing CORS requests</h1> },
         ]
     },
     {
         path: 'directory',
         element: <Dashboard />,
         children: [
-            { path: 'mapping', element: <div>mapping</div> },
-            { path: 'regions', element: <div>regions</div> },
-            { path: 'cities', element: <div>cities</div> },
-            { path: 'office-statuses', element: <div>office-statuses</div> },
-            { path: 'equipment', element: <div>equipment</div> },
-            { path: 'port-types', element: <div>port-types</div> },
-            { path: 'vrf', element: <div>vrf</div> },
-            { path: 'networks-table', element: <div>networks-table</div> },
-            { path: 'networks-tree', element: <div>networks-tree</div> },
-            { path: 'hardware-logs', element: <div>hardware-logs</div> },
-            { path: 'phones-logs', element: <div>phones-logs</div> },
+            { path: 'mapping', element: <h1>Рег.центры(mapping)</h1> },
+            { path: 'regions', element: <h1>Регионы</h1> },
+            { path: 'cities', element: <h1>Города</h1> },
+            { path: 'office-statuses', element: <h1>Статусы офисов</h1> },
+            { path: 'equipment', element: <h1>Оборудование</h1> },
+            { path: 'port-types', element: <h1>Типы портов</h1> },
+            { path: 'vrf', element: <h1>VRF</h1> },
+            { path: 'networks-table', element: <h1>Networks(Table)</h1> },
+            { path: 'networks-tree', element: <h1>Networks(Tree)</h1> },
+            { path: 'hardware-logs', element: <h1>Логи Hardware</h1> },
+            { path: 'phones-logs', element: <h1>Логи Phones</h1> },
         ]
     },
 

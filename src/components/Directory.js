@@ -49,7 +49,8 @@ class Directory extends Component {
                                     each.subMenu.map(subData => (
                                             <ListItem key={subData.id} button
                                                       component={RouterLink} to={subData.href}
-                                                      divider={subData.divider}>
+                                                      divider={subData.divider}
+                                            >
                                                 <ListItemIcon>
                                                     <Remove />
                                                 </ListItemIcon>
