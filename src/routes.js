@@ -1,8 +1,9 @@
 import Dashboard from "./Dashboard";
 import React from "react";
-import { Navigate } from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 import Locations from "./pages/Locations";
-import Example from "./pages/Example";
+import Reports from "./pages/Reports/Reports";
+import NotFound from "./pages/NotFound";
 
 const routes = [
     {
@@ -11,8 +12,10 @@ const routes = [
         children: [
             { path: '/locations', element: <Locations /> },
             { path: '/equipment', element: <h1>Оборудование</h1> },
-            { path: '/report/new', element: <Example />},
-            { path: '/', element: <Navigate to="/locations" /> }
+            { path: '/report/new', element: <Reports />},
+            { path: '/', element: <Navigate to="/report/new" /> },
+            { path: '404', element: <NotFound /> },
+            { path: '*', element: <Navigate to="/404" /> }
         ]
     },
     {

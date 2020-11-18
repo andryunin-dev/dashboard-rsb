@@ -1,16 +1,14 @@
 import Grid from "@material-ui/core/Grid";
 import React from "react";
-import LocationsTable from "../components/LocationsTable";
 
-function Locations() {
+function NotFound() {
     return (
         <Grid container spacing={3}>
             <Grid item xs={12}>
-                <h1>Офисы</h1>
-                    <LocationsTable />
+                <h1>404 Not found</h1>
             </Grid>
         </Grid>
     );
 }
 
-export default Locations;
+export default NotFound;

@@ -53,12 +53,12 @@ const rows = [
         'column06', 'column07', 'column08', 'column09', 'column10', ),
 ];
 
-export default function DenseTable() {
+export default function LocationsTable() {
     const classes = useStyles();
 
     return (
         <TableContainer component={Paper}>
-            <Table className={classes.table} size="small" aria-label="a dense table">
+            <Table className={classes.table} size="small">
                 <TableHead>
                     <TableRow>
                         <TableCell width="10%" align="right">Header01</TableCell>
